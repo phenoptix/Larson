@@ -1,0 +1,43 @@
+eeschema (2012-01-19 BZR 3256)-stable  >> Creation date: 14/05/2012 20:44:26
+
+#Cmp ( order = Reference )
+| D1         LED         
+| D2         LED         
+| D3         LED         
+| D4         LED         
+| D5         LED         
+| D6         LED         
+| D7         LED         
+| D8         LED         
+| D9         LED         
+| D10        LED         
+| D11        LED         
+| D12        LED         
+| IC1        ATTINY85-P  
+| R1         R           
+| R2         R           
+| R3         R           
+| R4         R           
+#End Cmp
+
+#Cmp ( order = Value )
+| ATTINY85-P   IC1       
+| LED          D1        
+| LED          D2        
+| LED          D3        
+| LED          D4        
+| LED          D5        
+| LED          D6        
+| LED          D7        
+| LED          D8        
+| LED          D9        
+| LED          D10       
+| LED          D11       
+| LED          D12       
+| R            R1        
+| R            R2        
+| R            R3        
+| R            R4        
+#End Cmp
+
+#End List

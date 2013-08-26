@@ -1,10 +1,10 @@
-update=10/06/2013 19:27:25
-last_client=pcbnew
+update=26/08/2013 20:50:07
+last_client=cvpcb
 [pcbnew]
 version=1
-PadDrlX=400
-PadDimH=600
-PadDimV=600
+PadDrlX=320
+PadDimH=660
+PadDimV=660
 BoardThickness=630
 TxtPcbV=800
 TxtPcbH=600
@@ -18,7 +18,6 @@ TxtLar=120
 MSegLar=150
 LastNetListRead=
 [pcbnew/libraries]
-LibDir=
 LibName1=sockets
 LibName2=connect
 LibName3=discret
@@ -29,5 +28,10 @@ LibName7=display
 LibName8=valves
 LibName9=led
 LibName10=dip_sockets
-LibName11=phen
-LibName12=C:/Users/x/Dropbox/PCB Projects/Custom Kicad Modules/phenoptix
+LibName11=C:/Users/x/Dropbox/Projects and WIPs/PCB Projects/KicadLibs/phenoptix
+LibDir=
+[cvpcb]
+version=1
+NetIExt=net
+[cvpcb/libraries]
+EquName1=devcms

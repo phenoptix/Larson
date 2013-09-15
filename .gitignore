@@ -7,6 +7,9 @@
 .metadata
 bin/
 tmp/
+*.stf
+*.000
+*.lib
 *.tmp
 *.bak
 *.swp

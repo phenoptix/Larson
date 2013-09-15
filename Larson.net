@@ -1,190 +1,106 @@
-# EESchema Netlist Version 1.1 created  14/05/2012 20:53:28
+# EESchema Netlist Version 1.1 created  09/09/2013 14:03:53
 (
- ( /4F6369D8 LED-5MM D1 LED
-  ( 1 N-000008 )
-  ( 2 N-000007 )
+ ( /521BAF63 $noname  SW1 SW_PUSH {Lib=SW_PUSH}
+  (    1 N-000001 )
+  (    2 GND )
  )
- ( /4F6369D7 LED-5MM D2 LED
-  ( 1 N-000010 )
-  ( 2 N-000007 )
+ ( /521BAA0B AVR-ISP-6  CON1 AVR-ISP-6 {Lib=AVR-ISP-6}
+  (    1 N-000015 )
+  (    2 ? )
+  (    3 N-000003 )
+  (    4 N-000021 )
+  (    5 N-000004 )
+  (    6 GND )
  )
- ( /4F636973 LED-5MM D3 LED
-  ( 1 N-000006 )
-  ( 2 N-000007 )
+ ( /521BA8AA DIP20  IC1 ATTINY2313-P {Lib=ATTINY2313-P}
+  (    1 N-000004 )
+  (    2 ? )
+  (    3 ? )
+  (    4 ? )
+  (    5 ? )
+  (    6 N-000001 )
+  (    7 ? )
+  (    8 ? )
+  (    9 N-000025 )
+  (   10 GND )
+  (   11 ? )
+  (   12 ? )
+  (   13 ? )
+  (   14 N-000022 )
+  (   15 N-000024 )
+  (   16 N-000020 )
+  (   17 N-000021 )
+  (   18 N-000015 )
+  (   19 N-000003 )
+  (   20 +3.3V )
  )
- ( /4F63697E LED-5MM D4 LED
-  ( 1 N-000012 )
-  ( 2 N-000011 )
+ ( /4F636B15 $noname  R1 R {Lib=R}
+  (    1 N-000025 )
+  (    2 N-000019 )
  )
- ( /4F6369E9 LED-5MM D5 LED
-  ( 1 N-000008 )
-  ( 2 N-000011 )
+ ( /4F636B11 $noname  R2 R {Lib=R}
+  (    1 N-000020 )
+  (    2 N-000018 )
  )
- ( /4F6369EA LED-5MM D6 LED
-  ( 1 N-000010 )
-  ( 2 N-000011 )
+ ( /4F636B0C $noname  R3 R {Lib=R}
+  (    1 N-000024 )
+  (    2 N-000017 )
  )
- ( /4F6369EC LED-5MM D7 LED
-  ( 1 N-000006 )
-  ( 2 N-000001 )
+ ( /4F636B03 $noname  R4 R {Lib=R}
+  (    1 N-000022 )
+  (    2 N-000023 )
  )
- ( /4F6369EB LED-5MM D8 LED
-  ( 1 N-000012 )
-  ( 2 N-000001 )
+ ( /4F636A02 $noname  D11 LED {Lib=LED}
+  (    1 N-000017 )
+  (    2 N-000025 )
  )
- ( /4F6369FF LED-5MM D9 LED
-  ( 1 N-000008 )
-  ( 2 N-000001 )
+ ( /4F636A01 $noname  D12 LED {Lib=LED}
+  (    1 N-000023 )
+  (    2 N-000025 )
  )
- ( /4F636A00 LED-5MM D10 LED
-  ( 1 N-000010 )
-  ( 2 N-000009 )
+ ( /4F636A00 $noname  D10 LED {Lib=LED}
+  (    1 N-000018 )
+  (    2 N-000025 )
  )
- ( /4F636A02 LED-5MM D11 LED
-  ( 1 N-000006 )
-  ( 2 N-000009 )
+ ( /4F6369FF $noname  D9 LED {Lib=LED}
+  (    1 N-000019 )
+  (    2 N-000020 )
  )
- ( /4F636A01 LED-5MM D12 LED
-  ( 1 N-000012 )
-  ( 2 N-000009 )
+ ( /4F6369EC $noname  D7 LED {Lib=LED}
+  (    1 N-000017 )
+  (    2 N-000020 )
  )
- ( /4F684F67 DIP-8__300_ELL IC1 ATTINY85-P
-  ( 1 ? )
-  ( 2 N-000007 )
-  ( 3 ? )
-  ( 4 GND )
-  ( 5 N-000009 )
-  ( 6 N-000001 )
-  ( 7 N-000011 )
-  ( 8 +3.3V )
+ ( /4F6369EB $noname  D8 LED {Lib=LED}
+  (    1 N-000023 )
+  (    2 N-000020 )
  )
- ( /4F636B15 R3 R1 R
-  ( 1 N-000009 )
-  ( 2 N-000008 )
+ ( /4F6369EA $noname  D6 LED {Lib=LED}
+  (    1 N-000018 )
+  (    2 N-000024 )
  )
- ( /4F636B11 R3 R2 R
-  ( 1 N-000001 )
-  ( 2 N-000010 )
+ ( /4F6369E9 $noname  D5 LED {Lib=LED}
+  (    1 N-000019 )
+  (    2 N-000024 )
  )
- ( /4F636B0C R3 R3 R
-  ( 1 N-000011 )
-  ( 2 N-000006 )
+ ( /4F6369D8 $noname  D1 LED {Lib=LED}
+  (    1 N-000019 )
+  (    2 N-000022 )
  )
- ( /4F636B03 R3 R4 R
-  ( 1 N-000007 )
-  ( 2 N-000012 )
+ ( /4F6369D7 $noname  D2 LED {Lib=LED}
+  (    1 N-000018 )
+  (    2 N-000022 )
+ )
+ ( /4F63697E $noname  D4 LED {Lib=LED}
+  (    1 N-000023 )
+  (    2 N-000024 )
+ )
+ ( /4F636973 $noname  D3 LED {Lib=LED}
+  (    1 N-000017 )
+  (    2 N-000022 )
  )
 )
 *
 { Allowed footprints by component:
-$component D1
- LED-3MM
- LED-5MM
- LED-10MM
- LED-0603
- LED-0805
- LED-1206
- LEDV
-$endlist
-$component D2
- LED-3MM
- LED-5MM
- LED-10MM
- LED-0603
- LED-0805
- LED-1206
- LEDV
-$endlist
-$component D3
- LED-3MM
- LED-5MM
- LED-10MM
- LED-0603
- LED-0805
- LED-1206
- LEDV
-$endlist
-$component D4
- LED-3MM
- LED-5MM
- LED-10MM
- LED-0603
- LED-0805
- LED-1206
- LEDV
-$endlist
-$component D5
- LED-3MM
- LED-5MM
- LED-10MM
- LED-0603
- LED-0805
- LED-1206
- LEDV
-$endlist
-$component D6
- LED-3MM
- LED-5MM
- LED-10MM
- LED-0603
- LED-0805
- LED-1206
- LEDV
-$endlist
-$component D7
- LED-3MM
- LED-5MM
- LED-10MM
- LED-0603
- LED-0805
- LED-1206
- LEDV
-$endlist
-$component D8
- LED-3MM
- LED-5MM
- LED-10MM
- LED-0603
- LED-0805
- LED-1206
- LEDV
-$endlist
-$component D9
- LED-3MM
- LED-5MM
- LED-10MM
- LED-0603
- LED-0805
- LED-1206
- LEDV
-$endlist
-$component D10
- LED-3MM
- LED-5MM
- LED-10MM
- LED-0603
- LED-0805
- LED-1206
- LEDV
-$endlist
-$component D11
- LED-3MM
- LED-5MM
- LED-10MM
- LED-0603
- LED-0805
- LED-1206
- LEDV
-$endlist
-$component D12
- LED-3MM
- LED-5MM
- LED-10MM
- LED-0603
- LED-0805
- LED-1206
- LEDV
-$endlist
 $component R1
  R?
  SM0603
@@ -213,5 +129,179 @@ $component R4
  R?-*
  SM1206
 $endlist
+$component D11
+ LED-3MM
+ LED-5MM
+ LED-10MM
+ LED-0603
+ LED-0805
+ LED-1206
+ LEDV
+$endlist
+$component D12
+ LED-3MM
+ LED-5MM
+ LED-10MM
+ LED-0603
+ LED-0805
+ LED-1206
+ LEDV
+$endlist
+$component D10
+ LED-3MM
+ LED-5MM
+ LED-10MM
+ LED-0603
+ LED-0805
+ LED-1206
+ LEDV
+$endlist
+$component D9
+ LED-3MM
+ LED-5MM
+ LED-10MM
+ LED-0603
+ LED-0805
+ LED-1206
+ LEDV
+$endlist
+$component D7
+ LED-3MM
+ LED-5MM
+ LED-10MM
+ LED-0603
+ LED-0805
+ LED-1206
+ LEDV
+$endlist
+$component D8
+ LED-3MM
+ LED-5MM
+ LED-10MM
+ LED-0603
+ LED-0805
+ LED-1206
+ LEDV
+$endlist
+$component D6
+ LED-3MM
+ LED-5MM
+ LED-10MM
+ LED-0603
+ LED-0805
+ LED-1206
+ LEDV
+$endlist
+$component D5
+ LED-3MM
+ LED-5MM
+ LED-10MM
+ LED-0603
+ LED-0805
+ LED-1206
+ LEDV
+$endlist
+$component D1
+ LED-3MM
+ LED-5MM
+ LED-10MM
+ LED-0603
+ LED-0805
+ LED-1206
+ LEDV
+$endlist
+$component D2
+ LED-3MM
+ LED-5MM
+ LED-10MM
+ LED-0603
+ LED-0805
+ LED-1206
+ LEDV
+$endlist
+$component D4
+ LED-3MM
+ LED-5MM
+ LED-10MM
+ LED-0603
+ LED-0805
+ LED-1206
+ LEDV
+$endlist
+$component D3
+ LED-3MM
+ LED-5MM
+ LED-10MM
+ LED-0603
+ LED-0805
+ LED-1206
+ LEDV
+$endlist
 $endfootprintlist
 }
+{ Pin List by Nets
+Net 1 "" ""
+ IC1 6
+ SW1 1
+Net 3 "" ""
+ CON1 3
+ IC1 19
+Net 4 "" ""
+ CON1 5
+ IC1 1
+Net 15 "" ""
+ IC1 18
+ CON1 1
+Net 16 "GND" "GND"
+ CON1 6
+ IC1 10
+ SW1 2
+Net 17 "" ""
+ D11 1
+ R3 2
+ D3 1
+ D7 1
+Net 18 "" ""
+ R2 2
+ D6 1
+ D10 1
+ D2 1
+Net 19 "" ""
+ D5 1
+ D9 1
+ D1 1
+ R1 2
+Net 20 "" ""
+ IC1 16
+ D8 2
+ D7 2
+ D9 2
+ R2 1
+Net 21 "" ""
+ CON1 4
+ IC1 17
+Net 22 "" ""
+ D1 2
+ R4 1
+ D3 2
+ IC1 14
+ D2 2
+Net 23 "" ""
+ D4 1
+ D12 1
+ R4 2
+ D8 1
+Net 24 "" ""
+ R3 1
+ IC1 15
+ D4 2
+ D6 2
+ D5 2
+Net 25 "" ""
+ D12 2
+ R1 1
+ IC1 9
+ D11 2
+ D10 2
+}
+#End

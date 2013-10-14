@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 09/09/2013 14:06:59
+EESchema Schematic File Version 2  date 25/09/2013 14:24:36
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -29,14 +29,13 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
-LIBS:Larson15cm_1-cache
 EELAYER 25  0
 EELAYER END
 $Descr A4 11700 8267
 encoding utf-8
 Sheet 1 1
 Title "noname.sch"
-Date "9 sep 2013"
+Date "25 sep 2013"
 Rev ""
 Comp ""
 Comment1 ""
@@ -45,15 +44,17 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 Wire Wire Line
-	4300 2750 4350 2750
+	1600 4800 1600 3000
 Wire Wire Line
-	4350 2750 4350 3250
+	1500 2900 1500 4700
 Wire Wire Line
-	4350 3250 2050 3250
+	1400 4600 1400 2800
 Wire Wire Line
-	6225 2325 6225 2050
+	1300 4500 1300 2700
 Wire Wire Line
-	6225 2050 5675 2050
+	4300 2750 4400 2750
+Wire Wire Line
+	4400 2750 4400 3250
 Wire Wire Line
 	4300 1850 4850 1850
 Wire Wire Line
@@ -74,6 +75,8 @@ Wire Wire Line
 	2050 2700 1300 2700
 Wire Wire Line
 	2050 2700 2050 3250
+Wire Wire Line
+	2050 3250 4400 3250
 Wire Wire Line
 	1900 2900 1500 2900
 Wire Wire Line
@@ -100,14 +103,8 @@ Connection ~ 1400 3700
 Connection ~ 1600 3900
 Wire Wire Line
 	1600 3900 4700 3900
-Wire Wire Line
-	1600 4800 1600 3000
-Wire Wire Line
-	1400 4600 1400 2800
 Connection ~ 5200 4800
 Connection ~ 5450 4500
-Wire Wire Line
-	1300 4500 1300 2700
 Connection ~ 6950 4000
 Wire Wire Line
 	6950 4000 6950 3600
@@ -160,8 +157,6 @@ Connection ~ 5950 4700
 Connection ~ 6200 4800
 Connection ~ 4700 4600
 Connection ~ 4950 4700
-Wire Wire Line
-	1500 2900 1500 4700
 Connection ~ 1500 3800
 Connection ~ 1300 3600
 Wire Wire Line
@@ -212,75 +207,40 @@ Wire Wire Line
 	4700 1075 2000 1075
 Wire Wire Line
 	2000 1075 2000 1350
-Wire Wire Line
-	4300 2450 5200 2450
-Wire Wire Line
-	5200 2450 5200 2700
-Wire Wire Line
-	5200 2700 5400 2700
 $Comp
-L GND #PWR01
-U 1 1 521BAF71
-P 6000 2700
-F 0 "#PWR01" H 6000 2700 30  0001 C CNN
-F 1 "GND" H 6000 2630 30  0001 C CNN
-	1    6000 2700
-	1    0    0    -1  
-$EndComp
-$Comp
-L SW_PUSH SW1
-U 1 1 521BAF63
-P 5700 2700
-F 0 "SW1" H 5850 2810 50  0000 C CNN
-F 1 "SW_PUSH" H 5700 2620 50  0000 C CNN
-	1    5700 2700
-	1    0    0    -1  
-$EndComp
-$Comp
-L GND #PWR02
-U 1 1 521BAC4F
-P 6225 2325
-F 0 "#PWR02" H 6225 2325 30  0001 C CNN
-F 1 "GND" H 6225 2255 30  0001 C CNN
-	1    6225 2325
-	1    0    0    -1  
-$EndComp
-Text Notes 3075 2200 0    60   ~ 0
-PB2-5 are PWM Pins
-$Comp
-L AVR-ISP-6 CON1
+L AVR-ISP-6 CON?
 U 1 1 521BAA0B
 P 5550 1950
-F 0 "CON1" H 5470 2190 50  0000 C CNN
+F 0 "CON?" H 5470 2190 50  0000 C CNN
 F 1 "AVR-ISP-6" H 5310 1720 50  0000 L BNN
 F 2 "AVR-ISP-6" V 5030 1990 50  0001 C CNN
 	1    5550 1950
 	1    0    0    -1  
 $EndComp
 $Comp
-L ATTINY2313-P IC1
+L ATTINY2313-P IC?
 U 1 1 521BA8AA
 P 3150 2150
-F 0 "IC1" H 2300 3100 60  0000 C CNN
+F 0 "IC?" H 2300 3100 60  0000 C CNN
 F 1 "ATTINY2313-P" H 3750 1300 60  0000 C CNN
 F 2 "DIP20" H 2350 1300 60  0001 C CNN
 	1    3150 2150
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR03
+L GND #PWR01
 U 1 1 4F684FA2
 P 3150 3150
-F 0 "#PWR03" H 3150 3150 30  0001 C CNN
+F 0 "#PWR01" H 3150 3150 30  0001 C CNN
 F 1 "GND" H 3150 3080 30  0001 C CNN
 	1    3150 3150
 	1    0    0    -1  
 $EndComp
 $Comp
-L +3.3V #PWR04
+L +3.3V #PWR02
 U 1 1 4F684F91
 P 3150 1050
-F 0 "#PWR04" H 3150 1010 30  0001 C CNN
+F 0 "#PWR02" H 3150 1010 30  0001 C CNN
 F 1 "+3.3V" H 3150 1160 30  0000 C CNN
 	1    3150 1050
 	1    0    0    -1  

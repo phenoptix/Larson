@@ -28,7 +28,11 @@ great PWM Stuff from http://startingelectronics.com/tutorials/AVR-8-microcontrol
 #define OUT_A PORTB2
 #define OUT_B PORTB3
 #define OUT_C PORTB4
-#define OUT_D PORTB5
+#define OUT_D PORTD5
+#define PWM_A OCR0A,//LED0
+#define PWM_B OCR1A,//LED1
+#define PWM_C OCR1B,//LED2
+#define PWM_D OCR0B,//LED3
 
 int b;
 
@@ -63,7 +67,7 @@ const char LED_HIGH[12] = {
 	(1<<OUT_D),//LED0
 	(1<<OUT_C),//LED1
 	(1<<OUT_B),//LED2
-	(1<<OUT_A),//LED2
+	(1<<OUT_A),//LED3
 
 	(1<<OUT_D),//LED4
 	(1<<OUT_C),//LED5
@@ -76,17 +80,58 @@ const char LED_HIGH[12] = {
 	(1<<OUT_A)//LED11
 };
 
-void LED_ON(char LED) { //LED must be from 0 to 11
+void LED_ON(char LED) { //LED must be from 0 to 11 Switches selected CharliePlexed LED
+	if(LED==0){
 	DDRB = PINS_ACT[LED];
-	PORTB = LED_HIGH[LED];
-	DDRB |= (1 << PORTB);
-	TCCR0A = (1 << COM0A1) | (1 << WGM00);  // phase correct PWM mode
-	OCR0A  = 0xA0;                          // initial PWM pulse width
+	DDRD = PINS_ACT[LED];
+	PORTD = LED_HIGH[LED];
+	}else if(LED==4){
+	DDRB = PINS_ACT[LED];
+	DDRD = PINS_ACT[LED];
+	PORTD = LED_HIGH[LED];
+	}
+	else if(LED==8){
+	DDRB = PINS_ACT[LED];
+	DDRD = PINS_ACT[LED];
+	PORTD = LED_HIGH[LED];
+	}
+	else{
+		DDRB = PINS_ACT[LED];
+		PORTB = LED_HIGH[LED];
+	}
+}
+void LED_PWM(int LED) { //LED must be from 0 to 11 Switches selected PWM CharliePlexed LED
+	//	DDRB = PINS_ACT[LED];
+	//	PORTB = LED_HIGH[LED];
+	if(LED==0){
+		TCCR0A = (1 << COM0A1) | (1 << WGM00);  // phase correct PWM mode
+		TCCR0B = (1 << CS01);   // clock source = CLK/8, start PWM
+		OCR0A = 0x10;
+		DDRB = PINS_ACT[LED];
+		PORTB = LED_HIGH[LED];
+	}
+	if(LED==1){
+		OCR1A = 0x10;
+		TCCR1A = (1 << COM0A1) | (1 << WGM00);  // phase correct PWM mode
+		TCCR1B = (1 << CS01);   // clock source = CLK/8, start PWM
+		DDRB = PINS_ACT[LED];
+		PORTB = LED_HIGH[LED];
+	}
+	if(LED==2){
+		OCR1B = 0x10;
+		DDRB = PINS_ACT[LED];
+		PORTB = LED_HIGH[LED];
+	}
+	if(LED==3){
+		OCR0B = 0x10;
+		DDRB = PINS_ACT[LED];
+		PORTD = LED_HIGH[LED];
+	}                  // initial PWM pulse width pin PB2
+	TCCR0B = (1 << CS01);   // clock source = CLK/8, start PWM
 }
 
 basic_larson()
 {
-int i;
 	while(1){     // loop forever
 		// scan from right to left, with the trailing LED fading out.
 		for(b=0; b <= 11; b++){  // Instead of incrementing, b gets shifted left.
@@ -94,19 +139,20 @@ int i;
 			// b == 0 and the loop terminates
 
 			LED_ON(b);  // turn on the LED
-			for(i = 30000; i > 0; i--); // short delay
+			_delay_ms(1000); // delay
 
-//			fade(LED_ON(b-1)); // call fade to fade out the LED to the right of
+//			LED_PWM(b-1); // call fade to fade out the LED to the right of
 			// the currently lit one
+//			_delay_ms(1000); // delay
 		}
 
 		// scan from left to right, with the trailing LED fading out
 		for(b=11; b >= 0; b--){ // We're shifting b right instead of left this time
 
 			LED_ON(b);  // turn on the LED
-			for(i = 30000; i > 0; i--); // short delay
-
-//			fade(LED_ON(b+1)); // fade the LED to the left of the lit one
+			_delay_ms(1000); // delay
+//			LED_PWM(b+1); // fade the LED to the left of the lit one
+//			_delay_ms(1000); // delay
 		}
 
 	} // end while
